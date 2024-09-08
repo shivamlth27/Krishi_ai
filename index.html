@@ -4,14 +4,348 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krishi.ai - Intelligent Plant Disease Recognition</title>
-    <link rel="stylesheet" href="static/home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <!-- <link rel="stylesheet" href="static/home.css"> -->
+     <style>
+        * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	color: #333;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Header styles */
+header {
+	background-color: #053636;
+	padding: 1rem 0;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img {
+	max-height: 50px;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+/* Banner styles */
+.banner {
+	height: 300px; /* Adjust this value to your preferred height */
+	overflow: hidden;
+	position: relative;
+}
+
+.banner img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+/* Main content styles */
+main {
+	background-color: #f5f5f5;
+	padding: 3rem 0;
+}
+
+h1, h2 {
+	color: #202a30;
+	margin-bottom: 1rem;
+}
+
+p {
+	margin-bottom: 1.5rem;
+	text-align: justify;
+}
+
+.work-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+.work-card {
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	width: calc(70% - 1rem);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.work-card img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+}
+
+.work-card h3 {
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.work-card a {
+	color: #14ae68;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+/* About us styles */
+.about-us {
+	background-color: #275c44;
+	color: #ffffff;
+	padding: 3rem 0;
+}
+
+.about-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.about-text {
+	width: 60%;
+}
+
+.about-image {
+	width: 35%;
+}
+
+.about-image img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+/* Our commitments styles */
+.our-commitments {
+	padding: 3rem 0;
+	background-color: #f9f9f9;
+}
+
+.commitment-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.commitment-card {
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	width: calc(50% - 1rem);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+	background-color: #275c44;
+	color: #b6d0c4;
+	padding: 3rem 0;
+	height: 200px;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-logo, .footer-links, .footer-contact {
+	width: 30%;
+}
+
+.footer-logo img {
+	max-width: 150px;
+	margin-bottom: 1rem;
+}
+
+.footer-links a {
+	color: #b6d0c4;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.footer-contact p {
+	margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.work-card, .commitment-card {
+		width: 100%;
+	}
+
+	.about-content {
+		flex-direction: column;
+	}
+
+	.about-text, .about-image {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	.footer-content {
+		flex-direction: column;
+	}
+
+	.footer-logo, .footer-links, .footer-contact {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+}
+
+
+/* -----------------abstract section------------------------ */
+
+
+.abstract-section {
+	background-color: #f0f8ff; /* Light blue background */
+	padding: 2rem;
+	margin: 2rem 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.abstract-section h2 {
+	color: #2c3e50;
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #3498db;
+	padding-bottom: 0.5rem;
+}
+
+.keywords {
+	background-color: #e74c3c; /* Red background for keywords */
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	display: inline-block;
+	margin-bottom: 1rem;
+	font-weight: bold;
+}
+
+.abstract-content {
+	color: #34495e;
+	line-height: 1.8;
+	text-align: justify;
+}
+
+.highlight {
+	background-color: #f1c40f; /* Yellow highlight */
+	padding: 0 3px;
+}
+
+
+.dataset-info {
+	background-color: #e8f5e9; /* Light green background */
+	padding: 2rem;
+	margin: 2rem 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dataset-info h2 {
+	color: #2e7d32;
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #4caf50;
+	padding-bottom: 0.5rem;
+}
+
+.model-details {
+	background-color: #e3f2fd; /* Light blue background */
+	padding: 2rem;
+	margin: 2rem 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.model-details h2 {
+	color: #0288d1; /* Dark blue text */
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #03a9f4; /* Lighter blue border */
+	padding-bottom: 0.5rem;
+}
+/* 
+.dataset-info {
+	background-color: #fff3e0; 
+	padding: 2rem;
+	margin: 2rem 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dataset-info h2 {
+	color: #f57c00; 
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #ff9800; 
+	padding-bottom: 0.5rem;
+} */
+
+
+.contribution-list {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.contribution-list li {
+	margin-bottom: 1rem;
+	padding-left: 1.5rem;
+	position: relative;
+}
+
+
+.contribution-list li::before {
+	content: "•";
+	color: #4caf50;
+	font-weight: bold;
+	position: absolute;
+	left: 0;
+}
+
+.highlight-green {
+	background-color: #81c784;
+	color: white;
+	padding: 0 3px;
+	border-radius: 3px;
+}
+     </style>
 </head>
 <body>
     <header>
         <nav class="container">
-            <div class="logo">
+            <!-- <div class="logo">
                 <img src="img/logo.png" alt="Krishi.ai Logo">
-            </div>
+            </div> -->
             <a href="#">HOME</a>
             <a href="/model">MODEL</a>
             <a href="/dataset">DATASET</a>
@@ -106,7 +440,7 @@
                     background, which doesn't accurately represent real-world conditions.
                 </p>
             </section>
-            <h1>What is a pre-trained model?</h1>
+            <!-- <h1>What is a pre-trained model?</h1>
             <p>
                 A pre-trained model, whether in the visual or textual domain, refers to a machine learning model that
                 undergoes initial training on a large and diverse dataset before being fine-tuned for specific tasks. In
@@ -125,7 +459,7 @@
                 contextual relationships, providing a foundation for various natural language processing tasks. In the
                 visual domain, pre-trained models based on CNNs grasp hierarchical features and representations of
                 visual data, facilitating tasks like image classification or object detection.
-            </p>
+            </p> -->
 
             <h2>MAIN WORK</h2>
             <p>
@@ -153,73 +487,384 @@
         </div>
         
     </main>
+    <div class="container">
 
-    <section class="about-us">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>ABOUT US</h2>
-                    <p>
-                        Welcome to Our Plant Disease Diagnostic Platform. The paper titled "DFN-PSAN: Multi-level deep
-                        information feature fusion extraction network for interpretable plant disease classification" by
-                        Guowei Dai et al. presents a novel deep learning model for classifying plant diseases in natural
-                        field environments. The model, DFN-PSAN (Deep Feature Network with Pyramid Squeeze Attention Network),
-                        leverages a multi-level deep information feature fusion extraction network to effectively classify
-                        fine-grained plant diseases.
-                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="img/about-us.jpg" alt="About Krishi.ai">
-                </div>
-            </div>
-        </div>
-    </section>
+        <h1>Plant Disease Dataset Information</h1>
 
-    <section class="our-commitments">
-        <div class="container">
-            <h2>Our Commitments</h2>
+
+
+        <div class="abstract-section">
+            <h2>2.1. Acquisition of datasets</h2>
             <p>
-                Safeguard the health of your plants starting now! Let's contribute together to a greener world.
+                Three plant disease datasets constructed from actual scene collections were selected as validation
+                objects for this study:
             </p>
-            <div class="commitment-cards">
-                <div class="commitment-card">
-                    <h3>Elevated Diagnostic Precision</h3>
-                    <p>
-                        Leveraging advanced artificial intelligence, our plant disease recognition service enhances
-                        diagnostic precision, ensuring users receive reliable results.
-                    </p>
-                </div>
-                <div class="commitment-card">
-                    <h3>Cost-Effective Training</h3>
-                    <p>
-                        With meticulously crafted pre-trained models, we significantly lower training costs, making
-                        plant disease recognition more economically efficient.
-                    </p>
-                </div>
-                <!-- Add more commitment cards as needed -->
-            </div>
+            <ol>
+                <li>
+                    <strong>Katra-Twelve:</strong> A public dataset of leaf images provided by the University of Shri
+                    Mata Vaishno Devi in Katra. It consists of 4503 images (2278 healthy, 2225 diseased) from 12 plants
+                    with 22 leaf types.
+                </li>
+                <li>
+                    <strong>BARI-Sunflower:</strong> Constructed from the demonstration farm collection of Bangladesh
+                    Agricultural Research Institute (BARI), Gazipur. Contains 467 raw images of delicate leaves and
+                    infected sunflower leaves and flowers.
+                </li>
+                <li>
+                    <strong>FGVC8:</strong> Constructed by Cornell Initiative for Digital Agriculture (CIDA). Contains
+                    18,632 images with 12 categories of apple leaf diseases.
+                </li>
+            </ol>
         </div>
-    </section>
-
-    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/logo.png" alt="Krishi.ai Logo">
-                    <p>Intelligent Plant Disease Recognition</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#">IIT BHILAI</a>
-                    <a href="#">Krishi.ai</a>
-                </div>
-                <div class="footer-contact">
-                    <p>Phone: 9310808926</p>
-                    <p>Address: IIT BHILAI</p>
-                    <p>Email: ayushkum@iitbhilai.ac.in</p>
-                </div>
-            </div>
-            <p class="copyright">Copyright © All Rights Reserved</p>
+            <h2>Table 1: Dataset Descriptions</h2>
+            <table>
+                <tr>
+                    <th>Classes</th>
+                    <th>Numbers diseased</th>
+                    <th>Numbers healthy</th>
+                </tr>
+                <tr>
+                    <td>Katra-Twelve</td>
+                    <td>265</td>
+                    <td>254</td>
+                </tr>
+                <tr>
+                    <td>Mango</td>
+                    <td>345</td>
+                    <td>276</td>
+                </tr>
+                <tr>
+                    <td>Alstonia Scholaris</td>
+                    <td>272</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Jamun</td>
+                    <td>142</td>
+                    <td>232</td>
+                </tr>
+                <tr>
+                    <td>Pongamia Pinnata</td>
+                    <td>124</td>
+                    <td>77</td>
+                </tr>
+                <tr>
+                    <td>Pomegranate</td>
+                    <td>118</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Chinar</td>
+                    <td>170</td>
+                    <td>179</td>
+                </tr>
+                <tr>
+                    <td>Gauva</td>
+                    <td>279</td>
+                    <td>322</td>
+                </tr>
+                <tr>
+                    <td>Arjun</td>
+                    <td>287</td>
+                    <td>103</td>
+                </tr>
+                <tr>
+                    <td>Jatropha</td>
+                    <td>277</td>
+                    <td>220</td>
+                </tr>
+                <tr>
+                    <td>Lemon</td>
+                    <td>133</td>
+                    <td>159</td>
+                </tr>
+                <tr>
+                    <td>Bael</td>
+                    <td>—</td>
+                    <td>148</td>
+                </tr>
+                <tr>
+                    <td>Basil</td>
+                    <td>470</td>
+                    <td>509</td>
+                </tr>
+                <tr>
+                    <td>BARI-Sunflower</td>
+                    <td>398</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Downy mildew</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Leaf scars</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Gray mold</td>
+                    <td>512</td>
+                    <td>1602</td>
+                </tr>
+                <tr>
+                    <td>Fresh leaf</td>
+                    <td>3181</td>
+                    <td>165</td>
+                </tr>
+                <tr>
+                    <td>FGVC8</td>
+                    <td>1184</td>
+                    <td>87</td>
+                </tr>
+                <tr>
+                    <td>complex</td>
+                    <td>1860</td>
+                    <td>97</td>
+                </tr>
+                <tr>
+                    <td>frog_eye_leaf_spot</td>
+                    <td>120</td>
+                    <td>4826</td>
+                </tr>
+                <tr>
+                    <td>frog_eye_leaf_spot complex</td>
+                    <td>686</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>healthy</td>
+                    <td>4624</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>powdery_mildew</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>powdery_mildew complex</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>rust</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>rust complex</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>rust frog_eye_leaf_spot</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>scab</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>scab frog_eye_leaf_spot</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>scab frog_eye_leaf_spot complex</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+            </table>
         </div>
-    </footer>
+
+        <div class="model-details">
+            <h2>Data Preprocessing</h2>
+            <p>Data preprocessing in this study is divided into two main stages, each with specific techniques to ensure
+                high-quality data for model training:</p>
+            <ol>
+                <li>
+                    <div class="abstract-section">
+                        <h2>Preliminary basic image preprocessing:</h2>
+                        <ul>
+                            <li><strong>Image read-in and format conversion:</strong> Initially, images are read using
+                                the OpenCV <code>imread</code> method, which by default reads images in BGR format.
+                                These images are then converted to RGB format using the <code>cvtColor</code> method to
+                                ensure consistency in color representation.</li>
+                            <li><strong>Adaptive scaling:</strong> To standardize image sizes and prevent loss of
+                                important image information, each image is scaled to a resolution of 256 × 256 pixels.
+                                This is achieved through adaptive scaling techniques that maintain image quality.</li>
+                            <li><strong>Gaussian filtering:</strong> The <code>GaussianBlur</code> method is applied to
+                                smooth the image and reduce noise. A Gaussian kernel of size 3 is used, which replaces
+                                each pixel’s value with the average value of its surrounding pixels, effectively
+                                minimizing noise and fine details.</li>
+                            <li><strong>Non-local mean noise reduction:</strong> To further reduce noise while
+                                preserving details, the <code>fastNlMeansDenoisingColored</code> method is employed.
+                                This technique uses parameters <code>h</code> and <code>hColor</code> set to 3 to
+                                maintain the texture and edges of the image while denoising.</li>
+                            <li><strong>Brightness and contrast adjustment:</strong> The <code>convertScaleAbs</code>
+                                method is used to adjust the image’s brightness and contrast. Parameters
+                                <code>α = 1.00</code> and <code>β = 0</code> are applied to control these properties,
+                                ensuring that the image has optimal visibility and contrast for feature extraction.</li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+
+                    <ul>
+                    </ul>
+                </li>
+            </ol>
+            <div class="abstract-section">
+                <h2>Weather Data Augmentation</h2>
+                <ul>
+                    <li>FGVC8: Six data augmentations per image for categories with sample volumes below 500</li>
+                    <li>Katra-Twelve and BARI-Sunflower: Two data augmentations per image</li>
+                    <li><strong>Solar illumination transformation:</strong> To simulate natural lighting conditions, the
+                        <code>RandomSunFlare</code> technique is used. Solar flares are added to the image with the
+                        appearance region determined by parameters (x_min, y_min, x_max, y_max). For this study, the
+                        upper right corner (0.9, 0, 1, 0.5) and upper left corner (0.0, 0.0, 1.0, 0.1) were chosen, and
+                        the aperture radius parameter was set to 300.</li>
+                    <li><strong>Raindrop transformation:</strong> The <code>RandomRain</code> technique simulates the
+                        effect of rain on images. This technique adds raindrops with a size of 1.0, using a drizzle type
+                        with a brightness coefficient of 0.6 to mimic realistic rain effects.</li>
+                    <li><strong>Shadow transformation:</strong> To account for natural shadow effects, the
+                        <code>RandomShadow</code> technique is employed. Shadows are added randomly, with the number of
+                        shadows varying between 1 and 5 and the side parameter of the shadow polygon set to 6 to
+                        represent realistic shadow patterns.</li>
+                    <li><strong>Fog transformation:</strong> To simulate foggy conditions, the <code>RandomFog</code>
+                        technique adds fog to different parts of the image. Fog intensity (fog coef) and fog circle
+                        transparency (alpha coef) are set between 0.25 and 0.8, with a fog parameter value of 0.3, to
+                        blur the background and simulate natural fog effects.</li>
+
+                </ul>
+            </div>
+
+            <p>The image processing and augmentation were performed using VSCode and Python 3.10, with PyTorch 1.13.1 +
+                cu117 and the OpenCV library, utilizing GPU acceleration for efficient processing. Due to dataset
+                imbalances in the FGVC8 dataset, six data augmentations per image were applied to categories with fewer
+                than 500 samples. The Katra-Twelve and BARI-Sunflower datasets underwent only two augmentations per
+                image. The effectiveness of the two-stage image processing, including both preliminary preprocessing and
+                weather data augmentation, is illustrated in Figures 2 and 3, showing the impact of these methods on
+                image quality and dataset robustness.</p>
+        </div>
+
+
+        <div class="dataset-info">
+            <h2>Technical Details</h2>
+            <ul>
+                <li>Image processing: Vs code and Python 3.10</li>
+                <li>Deep learning framework: Pytorch 1.13.1 + cu117</li>
+                <li>Image processing library: OpenCV</li>
+                <li>Hardware acceleration: GPU</li>
+            </ul>
+        </div>
+
+
+        <div class="dataset-info">
+            <h2>Dataset Division</h2>
+            <p>After preprocessing, the three new datasets were randomly divided into three parts:</p>
+            <ul>
+                <li>Training set: 80%</li>
+                <li>Validation set: 10%</li>
+                <li>Test set: 10%</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h1>DFN-PSAN Architecture with PSA</h1>
+        
+        <p>The <span class="highlight">DFN-PSAN</span> (Deep Fusion Network with Pyramid Squeeze Attention Network) architecture is an improvement of <span class="highlight">YOLOv5</span>, designed for more accurate plant disease detection. It focuses on enhanced feature extraction and classification through the use of <span class="highlight">Pyramid Squeeze Attention (PSA)</span>, which boosts the model's ability to focus on important features in plant images.</p>
+
+        <h2>Key Components</h2>
+
+        <div class="card">
+            <h3>1. YOLOv5 for Feature Extraction</h3>
+            <p>YOLOv5, a real-time object detection model, handles feature extraction. While YOLOv5n offers speed and low weight, it lacks deep feature extraction capability. To address this, DFN-PSAN introduces modifications to improve feature extraction, fusion, and convergence speed.</p>
+        </div>
+
+        <div class="card">
+            <h3>2. YOLOv5 Architecture</h3>
+            <ul>
+                <li><strong>Backbone:</strong> Utilizes CSPDarkNet with a 6 × 6 convolutional layer replacing the older Focus structure.</li>
+                <li><strong>SPP Module:</strong> Expands the receptive field, extracting both local and global features through max-pooling at various scales. The operation can be represented as:
+                    \[
+                    \text{SPP}(FM) = \text{Concat}(\text{MaxPool}(FM, k_1), \text{MaxPool}(FM, k_2), \text{MaxPool}(FM, k_3))
+                    \]
+                    where \( FM \) is the input feature map and \( k_i \) are the pooling kernel sizes.</li>
+            </ul>
+            <img src="{{ url_for('static', filename='img/DFN-PSAN_architecture.png') }}" alt="DFN-PSAN_architecture">
+        </div>
+
+        <div class="card">
+            <h3>3. Neck (DFN)</h3>
+            <p>The Neck combines the Feature Pyramid Network (FPN) and Path Aggregation Network (PAN). The FPN upscales feature maps from lower levels to capture high-level semantic information, while the PAN downscales feature maps from higher levels to improve localization accuracy. This can be described mathematically as:
+                \[
+                \text{FPN}(x) = \text{Upsample}(x) + \text{SkipConnection}(x)
+                \]
+                \[
+                \text{PAN}(x) = \text{Downsample}(x) + \text{SkipConnection}(x)
+                \]
+                where \( x \) represents the feature maps at various levels of the network.</p>
+        </div>
+
+        <div class="card">
+            <h3>4. PSAN Classification Layer</h3>
+            <p>The PSAN classification layer replaces YOLOv5's Head to enhance classification performance. The Pyramid Squeeze Attention mechanism refines the focus on important features using:
+                \[
+                \text{PSA}(FM) = \text{GAP}(\text{Attention}(FM))
+                \]
+                where \(\text{GAP}\) represents Global Average Pooling and \(\text{Attention}\) denotes the attention mechanism applied to the feature map \( FM \).</p>
+        </div>
+
+        <div class="dataset-info">
+            <h3>5. Feature Fusion and Attention</h3>
+            <p>The Neck structure integrates features from various layers, improving the network’s ability to handle objects at different scales. The attention mechanism, which can be expressed as:
+                \[
+                \text{Attention}(FM) = \sigma(W \cdot FM + b)
+                \]
+                where \( \sigma \) is the activation function, \( W \) is the weight matrix, and \( b \) is the bias, enhances the focus on relevant features. Classification is performed using the Softmax function:
+                \[
+                \text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}
+                \]
+                which converts the output logits into probabilities for each class.</p>
+        </div>
+
+        <div class="card">
+            <h3>6. Training</h3>
+            <p>Training involves updating the model parameters using a deep neural network with 30 hyperparameters. The optimization process minimizes the cross-entropy loss function with label smoothing, which can be expressed as:</p>
+            <p>
+                \[
+                \text{Loss} = -\sum_{i=1}^N \left(y_i \log(p_i) \right)
+                \]
+            </p>
+            <p>where \( N \) is the total number of categories, \( y_i \) is the prediction result for category \( i \), \( p_i \) is the confidence score of the network output for category \( i \), and \( \epsilon \) is the label smoothing hyperparameter. Label smoothing modifies \( y_i \) as follows:</p>
+            <p>
+                \[
+                y_i = 
+                \begin{cases} 
+                1 - \epsilon & \text{if } i \text{ is the target category} \\
+                \frac{\epsilon}{N} & \text{if } i \text{ is not the target category}
+                \end{cases}
+                \]
+            </p>
+            <p>The loss function with label smoothing helps improve the model's generalization by preventing it from becoming too confident about its predictions.</p>
+        </div>
+        
+
+        <div class="conclusion">
+            <h2>Conclusion</h2>
+            <p>The DFN-PSAN architecture, through its enhancements and mathematical formulations, achieves superior plant disease detection by integrating advanced feature extraction, attention mechanisms, and effective classification methods.</p>
+        </div>
+        
+    </div>
+    
 </body>
 </html>
