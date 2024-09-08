@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFN-PSAN Architecture Summary</title>
+    <title>Krishi.ai</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
     <style>
@@ -150,9 +150,10 @@
             <div class="logo">
                 <img src="{{ url_for('static', filename='img/pro.png') }}" alt="Krishi.ai Logo">
             </div>
-            <a href="#">HOME</a>
+            <a href="/">HOME</a>
             <a href="/model">MODEL</a>
             <a href="/dataset">DATASET</a>
+            <a href="/find">CHECK FOR NEW DATA</a>
         </nav>
     </header>
     <div class="container">
@@ -201,7 +202,7 @@
                 where \(\text{GAP}\) represents Global Average Pooling and \(\text{Attention}\) denotes the attention mechanism applied to the feature map \( FM \).</p>
         </div>
 
-        <div class="card">
+        <div class="dataset-info">
             <h3>5. Feature Fusion and Attention</h3>
             <p>The Neck structure integrates features from various layers, improving the network’s ability to handle objects at different scales. The attention mechanism, which can be expressed as:
                 \[
@@ -216,17 +217,51 @@
 
         <div class="card">
             <h3>6. Training</h3>
-            <p>Training involves updating the model parameters using a deep neural network with 30 hyperparameters. The optimization process minimizes the loss function:
+            <p>Training involves updating the model parameters using a deep neural network with 30 hyperparameters. The optimization process minimizes the cross-entropy loss function with label smoothing, which can be expressed as:</p>
+            <p>
                 \[
-                \text{Loss} = \frac{1}{N} \sum_{i=1}^N \text{Loss}_i
+                \text{Loss} = -\sum_{i=1}^N \left(y_i \log(p_i) \right)
                 \]
-                where \( N \) is the number of samples and \( \text{Loss}_i \) is the loss for each sample. The optimized hyperparameters are crucial for achieving real-time performance without sacrificing accuracy.</p>
+            </p>
+            <p>where \( N \) is the total number of categories, \( y_i \) is the prediction result for category \( i \), \( p_i \) is the confidence score of the network output for category \( i \), and \( \epsilon \) is the label smoothing hyperparameter. Label smoothing modifies \( y_i \) as follows:</p>
+            <p>
+                \[
+                y_i = 
+                \begin{cases} 
+                1 - \epsilon & \text{if } i \text{ is the target category} \\
+                \frac{\epsilon}{N} & \text{if } i \text{ is not the target category}
+                \end{cases}
+                \]
+            </p>
+            <p>The loss function with label smoothing helps improve the model's generalization by preventing it from becoming too confident about its predictions.</p>
         </div>
+        
 
         <div class="conclusion">
             <h2>Conclusion</h2>
             <p>The DFN-PSAN architecture, through its enhancements and mathematical formulations, achieves superior plant disease detection by integrating advanced feature extraction, attention mechanisms, and effective classification methods.</p>
         </div>
+        
     </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Krishi.ai Logo">
+                    <p>Intelligent Plant Disease Recognition</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">IIT BHILAI</a>
+                    <a href="#">Krishi.ai</a>
+                </div>
+                <div class="footer-contact">
+                    <p>Phone: 9310808926</p>
+                    <p>Address: IIT BHILAI</p>
+                    <p>Email: ayushkum@iitbhilai.ac.in</p>
+                </div>
+            </div>
+            <p class="copyright">Copyright © All Rights Reserved</p>
+        </div>
+    </footer>
 </body>
 </html>

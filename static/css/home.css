@@ -159,6 +159,7 @@ footer {
 	background-color: #275c44;
 	color: #b6d0c4;
 	padding: 3rem 0;
+	height: 200px;
 }
 
 .footer-content {
@@ -253,7 +254,7 @@ footer {
 }
 
 
-.model-details, .dataset-info {
+.dataset-info {
 	background-color: #e8f5e9; /* Light green background */
 	padding: 2rem;
 	margin: 2rem 0;
@@ -261,13 +262,46 @@ footer {
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.model-details h2, .dataset-info h2 {
+.dataset-info h2 {
 	color: #2e7d32;
 	font-size: 1.8rem;
 	margin-bottom: 1rem;
 	border-bottom: 2px solid #4caf50;
 	padding-bottom: 0.5rem;
 }
+
+.model-details {
+	background-color: #e3f2fd; /* Light blue background */
+	padding: 2rem;
+	margin: 2rem 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.model-details h2 {
+	color: #0288d1; /* Dark blue text */
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #03a9f4; /* Lighter blue border */
+	padding-bottom: 0.5rem;
+}
+/* 
+.dataset-info {
+	background-color: #fff3e0; 
+	padding: 2rem;
+	margin: 2rem 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dataset-info h2 {
+	color: #f57c00; 
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #ff9800; 
+	padding-bottom: 0.5rem;
+} */
+
 
 .contribution-list {
 	list-style-type: none;
