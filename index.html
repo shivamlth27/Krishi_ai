@@ -338,6 +338,67 @@ footer {
 	padding: 0 3px;
 	border-radius: 3px;
 }
+.card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+
+        .conclusion {
+            background-color: var(--conclusion-background);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .conclusion h2 {
+            color: white;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+        :root {
+            --primary-color: #2c3e50; /* Dark Slate Blue */
+            --secondary-color: #e67e22; /* Carrot Orange */
+            --accent-color: #16a085; /* Turquoise */
+            --background-color: #f9f9f9; /* Light Gray */
+            --text-color: #34495e; /* Slate Gray */
+            --card-background: #ffffff; /* White */
+            --header-border-color: #2ecc71; /* Emerald Green */
+            --conclusion-background: #8e44ad; /* Amethyst */
+        }
+        .highlight {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
      </style>
 </head>
 <body>
@@ -361,6 +422,8 @@ footer {
     </div> -->
 
     <main>
+        
+    <main>
         <div class="container">
             <section>
                 <div>
@@ -368,8 +431,7 @@ footer {
                         Implementation of Paper: DFN-PSAN: Multi-level deep information feature fusion extraction network
                         for interpretable plant disease classification
                     
-                    </h1>
-                       
+                    </h1>     
                 </div>
             </section>
             <section class="abstract-section">
@@ -403,6 +465,21 @@ footer {
                     </p>
                 </div>
             </section>
+       
+                <div class="dataset-info">
+                    <h2>Motivation</h2>
+                    <p>Agriculture is a cornerstone of national development, playing a critical role in the economy and food security. The following facts underscore the importance and urgency of improving crop disease identification:</p>
+                    <ul>
+                        <li>According to the Food and Agriculture Organization (FAO), agricultural productivity is essential for ensuring food security for a growing global population.</li>
+                        <li>Crop diseases can reduce yields by up to 30% annually, leading to substantial economic losses for farmers (Jayagopal et al., 2022).</li>
+                        <li>Traditional methods of disease identification, such as manual inspection, are time-consuming and often ineffective, resulting in delayed responses to disease outbreaks.</li>
+                        <li>Early and accurate detection of diseases can significantly mitigate yield losses and improve the quality of crops, thus enhancing overall food security (Legrand, 2023).</li>
+                        <li>The rise of advanced technologies, such as machine learning and computer vision, offers new opportunities to transform crop disease detection by providing rapid, precise, and scalable solutions.</li>
+                    </ul>
+                    <p>By leveraging these technologies, this project aims to address the limitations of traditional methods, enabling more efficient disease identification and timely interventions. This approach promises to safeguard agricultural production, reduce economic impacts, and support national food security.</p>
+                </div>
+   
+            
             <section class="model-details">
                 <h2>Novel Lightweight Deep Learning Model</h2>
                 <p>
@@ -438,6 +515,7 @@ footer {
                 <p>
                     <strong>Note:</strong> The PlantVillage open-source plant disease dataset was not used due to its uniform 
                     background, which doesn't accurately represent real-world conditions.
+                    <span class="ellipsis"> <a href="/dataset" class="more-link">Read More</a></span>
                 </p>
             </section>
             <!-- <h1>What is a pre-trained model?</h1>
@@ -461,32 +539,32 @@ footer {
                 visual data, facilitating tasks like image classification or object detection.
             </p> -->
 
-            <h2>MAIN WORK</h2>
+            <!-- <h2>MAIN WORK</h2>
             <p>
                 Enhancing Plant Disease Diagnosis: Innovative Multimodal Datasets and Pre-trained Models for Improved
                 Accuracy and Efficiency
-            </p>
-        <div class="work-section">
-            <div class="work-card">
-                <img src="img/model-st.jpeg" alt="DFN-PSAN Model">
-                <h3>DFN-PSAN: Multi-level deep information feature fusion extraction network for
-                    interpretable plant disease classification</h3>
-                <p>
-                    Key highlights of the paper include:
-                    1. Model Architecture: DFN-PSAN is built upon the YOLOv5 Backbone and Neck network, which
-                    serves as the base structure (DFN). It integrates pyramid squeeze attention (PSA) with
-                    multiple convolutional layers to design a novel classification network (PSAN).
-                    <span class="ellipsis"> <a href="/model" class="more-link">Read More</a></span>
-                </p>
-                
-                <div class="card-links">
+            </p> -->
+
+            <div class="work-section">
+                <div class="work-card">
+                    <img src="img/model-st.jpeg" alt="DFN-PSAN Model">
+                    <h3>DFN-PSAN: Multi-level deep information feature fusion extraction network for
+                        interpretable plant disease classification</h3>
+                    <p>
+                        Key highlights of the paper include:
+                        <hr>
+                        1. Model Architecture: DFN-PSAN is built upon the YOLOv5 Backbone and Neck network, which
+                        serves as the base structure (DFN). It integrates pyramid squeeze attention (PSA) with
+                        multiple convolutional layers to design a novel classification network (PSAN).
+                        <span class="ellipsis"> <a href="/model" class="more-link">Read More</a></span>
+                    </p>
                     <a href="https://www.sciencedirect.com/science/article/pii/S0168169923008694">Read Paper</a>
                 </div>
+                <!-- Add more work cards as needed -->
             </div>
-            <!-- Add more work cards as needed -->
         </div>
-        
     </main>
+
     <div class="container">
 
         <h1>Plant Disease Dataset Information</h1>
