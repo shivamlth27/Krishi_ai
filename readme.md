@@ -11,6 +11,7 @@
  
 **Phase 2**
    -  requires sharing running code through the user's Github, which will be evaluated using test data and commits history.
+   -  Project Report - https://www.overleaf.com/project/66cad3db303bdf5ae40d5e83
   
 **Phase 3**
    - entails delivering a final presentation accompanied by the complete code showcasing the experiments and results.
