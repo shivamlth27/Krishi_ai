@@ -15,7 +15,7 @@ def model():
 
 @app.route('/dataset')
 def dataset():
-    return render_template('dataset.html')
+    return  render_template('dataset.html')
 
 @app.route('/find')
 def find():
@@ -23,7 +23,7 @@ def find():
 
 
 UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'pdf', 'doc', 'docx'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'pdf', 'doc', 'docx','svg'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
