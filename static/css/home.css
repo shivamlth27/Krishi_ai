@@ -44,7 +44,8 @@ nav a {
 
 /* Banner styles */
 .banner {
-	height: 300px; /* Adjust this value to your preferred height */
+	height: 300px;
+	/* Adjust this value to your preferred height */
 	overflow: hidden;
 	position: relative;
 }
@@ -55,13 +56,15 @@ nav a {
 	object-fit: cover;
 	object-position: center;
 }
+
 /* Main content styles */
 main {
 	background-color: #f5f5f5;
 	padding: 3rem 0;
 }
 
-h1, h2 {
+h1,
+h2 {
 	color: #202a30;
 	margin-bottom: 1rem;
 }
@@ -159,15 +162,25 @@ footer {
 	background-color: #275c44;
 	color: #b6d0c4;
 	padding: 3rem 0;
-	height: 200px;
+	height: 250px;
 }
+/* footer {
+	background-color: #275c44;
+	color: #b6d0c4;
+	padding: 3rem 0;
+	min-height: 200px;
+	margin-bottom: 0;
+	position: relative;
+} */
 
 .footer-content {
 	display: flex;
 	justify-content: space-between;
 }
 
-.footer-logo, .footer-links, .footer-contact {
+.footer-logo,
+.footer-links,
+.footer-contact {
 	width: 30%;
 }
 
@@ -189,7 +202,9 @@ footer {
 
 /* Responsive design */
 @media (max-width: 768px) {
-	.work-card, .commitment-card {
+
+	.work-card,
+	.commitment-card {
 		width: 100%;
 	}
 
@@ -197,7 +212,8 @@ footer {
 		flex-direction: column;
 	}
 
-	.about-text, .about-image {
+	.about-text,
+	.about-image {
 		width: 100%;
 		margin-bottom: 2rem;
 	}
@@ -206,7 +222,9 @@ footer {
 		flex-direction: column;
 	}
 
-	.footer-logo, .footer-links, .footer-contact {
+	.footer-logo,
+	.footer-links,
+	.footer-contact {
 		width: 100%;
 		margin-bottom: 2rem;
 	}
@@ -217,7 +235,8 @@ footer {
 
 
 .abstract-section {
-	background-color: #f0f8ff; /* Light blue background */
+	background-color: #f0f8ff;
+	/* Light blue background */
 	padding: 2rem;
 	margin: 2rem 0;
 	border-radius: 10px;
@@ -233,7 +252,8 @@ footer {
 }
 
 .keywords {
-	background-color: #e74c3c; /* Red background for keywords */
+	background-color: #e74c3c;
+	/* Red background for keywords */
 	color: white;
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
@@ -249,13 +269,15 @@ footer {
 }
 
 .highlight {
-	background-color: #f1c40f; /* Yellow highlight */
+	background-color: #f1c40f;
+	/* Yellow highlight */
 	padding: 0 3px;
 }
 
 
 .dataset-info {
-	background-color: #e8f5e9; /* Light green background */
+	background-color: #e8f5e9;
+	/* Light green background */
 	padding: 2rem;
 	margin: 2rem 0;
 	border-radius: 10px;
@@ -271,7 +293,8 @@ footer {
 }
 
 .model-details {
-	background-color: #e3f2fd; /* Light blue background */
+	background-color: #e3f2fd;
+	/* Light blue background */
 	padding: 2rem;
 	margin: 2rem 0;
 	border-radius: 10px;
@@ -279,12 +302,15 @@ footer {
 }
 
 .model-details h2 {
-	color: #0288d1; /* Dark blue text */
+	color: #0288d1;
+	/* Dark blue text */
 	font-size: 1.8rem;
 	margin-bottom: 1rem;
-	border-bottom: 2px solid #03a9f4; /* Lighter blue border */
+	border-bottom: 2px solid #03a9f4;
+	/* Lighter blue border */
 	padding-bottom: 0.5rem;
 }
+
 /* 
 .dataset-info {
 	background-color: #fff3e0; 
